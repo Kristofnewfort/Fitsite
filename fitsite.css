@@ -1,0 +1,175 @@
+/*Responsive Design*/
+@media (max-width: 768px) {
+    /* Adjust styles for tablets or smaller screens */
+    header nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
+
+/* 1. Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Body & Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    color: #161111;
+    background: linear-gradient(to bottom, rgba(41, 28, 114, 0.911), rgb(204, 11, 30));
+  }
+  
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, rgba(30, 64, 214, 0.226)); /* Solid background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+header.transparent {
+  background-color: rgb(231, 76, 76); /* Semi-transparent */
+}
+
+  header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  header nav a {
+    text-decoration: none;
+    color: #cccaca;
+  }
+  header nav a:hover {
+    color: #000000;
+  }
+  
+  /* 4. Hero Section */
+  .hero {
+    background: url('../images/hero-image.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+  
+    /* Rounded corners and transition for smooth effect */
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hero button:hover {
+    background-color: #0e8303;
+    color: #f1f1f1;
+  
+    /* Shadow and scale for pop-out effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 10px #1a5801;
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
+
+  /* 5. Programs Section */
+  .programs {
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(204, 11, 30));
+  }
+  .programs h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .program {
+    margin-bottom: 2rem;
+  }
+  .program h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 6. Signup Section */
+  .signup {
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(204, 11, 30));
+    text-align: center;
+  }
+  .signup h2 {
+    margin-bottom: 1rem;
+  }
+  #signupForm {
+    max-width: 400px;
+    margin: 1rem auto;
+    text-align: left;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  #signupForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  #signupForm input,
+  #signupForm select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #signupForm button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #signupForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 7. About Section */
+  .about {
+    padding: 2rem;
+    background-color: #fff;
+  }
+  .about h2 {
+    margin-bottom: 1rem;
+  }
+  .about p {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 8. Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+  }
+  

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Team Training - Home</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="fitsite.css" />
+  <!-- Link to JavaScript (defer makes sure the JS loads after HTML) -->
+  <script src="fitsite.js" defer></script>
+</head>
+<body>
+  <!-- 1. Header -->
+  <header>
+    <div class="logo">360 Proformance</div>
+    <nav>
+      <ul>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#signup">Signup</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="hero">
+    <h1>Professional Team Training Programs</h1>
+    <p>Enhance your skills and productivity with our monthly training!</p>
+    <button onclick="scrollToSignup()">Join for £30/month</button>
+  </section>
+
+  <!-- 3. Training Programs -->
+  <section class="programs" id="programs">
+    <h2>Our Training Programs</h2>
+    <div class="program">
+      <h3>Program A</h3>
+      <p>Description of program A benefits, content, and duration.</p>
+    </div>
+    <div class="program">
+      <h3>Program B</h3>
+      <p>Description of program B benefits, content, and duration.</p>
+    </div>
+  </section>
+
+  <!-- 4. Pricing & Signup Form -->
+  <section class="signup" id="signup">
+    <h2>Only £30/month!</h2>
+    <p>Sign up today and level up your entire team.</p>
+    <form id="signupForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="programSelect">Select a Program:</label>
+      <select id="programSelect" name="programSelect">
+        <option value="programA">Program A</option>
+        <option value="programB">Program B</option>
+      </select>
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- 5. About / Contact -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We are a dedicated team of professionals providing training courses that help teams excel.</p>
+    <h3>Contact</h3>
+    <p>Email: info@teamtraining.com</p>
+    <p>Phone: +44 (0)1234 567890</p>
+  </section>
+
+  <!-- 6. Footer -->
+  <footer>
+    <p>© 2024 TeamTraining. All rights reserved.</p>
+  </footer>
+</body>
+</html>
