@@ -1,17 +1,4 @@
-/*Responsive Design*/
-@media (max-width: 768px) {
-    /* Adjust styles for tablets or smaller screens */
-    header nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .hero h1 {
-      font-size: 2rem;
-    }
-  }
-  
-
-/* 1. Basic Reset */
+/* 1. Reset */
 * {
     margin: 0;
     padding: 0;
@@ -22,41 +9,44 @@
   body {
     font-family: Arial, sans-serif;
     color: #161111;
-    background: linear-gradient(to bottom, rgba(41, 28, 114, 0.911), rgb(204, 11, 30));
+    background: linear-gradient(to bottom, rgba(206, 205, 205, 0.911), rgba(87, 87, 87, 0.822), rgb(14, 118, 187));
   }
   
-/* Header Styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(to bottom, rgba(30, 64, 214, 0.226)); /* Solid background */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-header.transparent {
-  background-color: rgba(228, 110, 110, 0.164); /* Semi-transparent */
-}
-
+  /* 3. Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to bottom, rgba(201, 206, 226, 0.075));
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  header.transparent {
+    background-color: rgba(221, 221, 221, 0.336);
+  }
+  
   header .logo {
     font-weight: bold;
     font-size: 1.5rem;
   }
+  
   header nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
   }
+  
   header nav a {
     text-decoration: none;
-    color: #cccaca;
-  }
-  header nav a:hover {
     color: #000000;
+  }
+  
+  header nav a:hover {
+    color: #000;
   }
   
   /* 4. Hero Section */
@@ -71,47 +61,66 @@ header.transparent {
     color: #fff;
     padding: 2rem;
   }
+  
   .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
+  
   .hero button {
     background-color: #007bff;
     color: #fff;
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
     border: none;
-    cursor: pointer;
-  
-    /* Rounded corners and transition for smooth effect */
     border-radius: 20px;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
+  
   .hero button:hover {
     background-color: #0e8303;
-    color: #f1f1f1;
-  
-    /* Shadow and scale for pop-out effect */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 10px #1a5801;
-    transform: scale(1.1); /* Slightly enlarge the button */
+    transform: scale(1.1);
   }
   
-
   /* 5. Programs Section */
   .programs {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
     padding: 2rem;
+    justify-content: space-between;
+    gap: 20px; /* Spacing between items */
     background: linear-gradient(to bottom, rgba(204, 11, 30));
   }
+  
   .programs h2 {
     text-align: center;
     margin-bottom: 2rem;
+    width: 100%; /* Heading spans full width */
   }
+  
   .program {
+    flex: 1; /* Equal space for each program */
+    min-width: 250px; /* Minimum size to prevent shrinking */
+    max-width: 45%; /* Prevents items from becoming too wide */
     margin-bottom: 2rem;
+    text-align: left; /* Align text to the left */
   }
+  
   .program h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive Design: Stack programs vertically on smaller screens */
+  @media (max-width: 768px) {
+    .programs {
+      flex-direction: column;
+    }
+    .program {
+      max-width: 100%; /* Full width for stacked layout */
+    }
   }
   
   /* 6. Signup Section */
@@ -120,86 +129,142 @@ header.transparent {
     background: linear-gradient(to bottom, rgba(204, 11, 30));
     text-align: center;
   }
+  
   .signup h2 {
     margin-bottom: 1rem;
   }
+  
   #signupForm {
     max-width: 400px;
     margin: 1rem auto;
     text-align: left;
-    background-color: #fff;
+    background: linear-gradient(to bottom, rgba(204, 11, 30, 0));
     padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  
   #signupForm label {
     display: block;
     margin-bottom: 0.5rem;
   }
+  
   #signupForm input,
   #signupForm select {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      background-color: rgba(255, 255, 255, 0.637); /* Semi-transparent white */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #000; /* Text color */
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
   }
+  
+  #signupForm input:focus,
+  #signupForm select:focus {
+      background-color: rgba(255, 255, 255, 0.8); /* Slightly less transparent on focus */
+      outline: none;
+      border-color: #007bff; /* Highlight border on focus */
+  }
+  
   #signupForm button {
-    width: 100%;
-    padding: 0.75rem;
     background-color: #007bff;
     color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
   }
+
+  
   #signupForm button:hover {
-    background-color: #0056b3;
+    background-color: #0e8303;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 10px #1a5801;
+    transform: scale(1.1);
   }
   
   /* 7. About Section */
   .about {
     padding: 2rem;
-    background-color: #fff;
+    background: linear-gradient(to bottom, rgba(50, 113, 230, 0), rgba(59, 110, 206, 0.548));
   }
+  
   .about h2 {
     margin-bottom: 1rem;
   }
+  
   .about p {
     margin-bottom: 0.5rem;
   }
   
-  /* 8. Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
+  /* Individual Profiles */
+  .about div {
+    display: flex; /* Side-by-side layout for image and text */
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 20px;
   }
   
-
-    /* background circle*/
-
-
-.background-ring {
-    position: fixed;     /* Stays in the same place */
+  .about img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .about .text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .about h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .about p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design: Stack image and text vertically */
+  @media (max-width: 768px) {
+    .about div {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about img {
+      width: 200px;
+    }
+  }
+  
+  /* 8. Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(rgba(59, 110, 206, 0));
+  }
+  
+  /* 9. Background Circle */
+  .background-ring {
+    position: fixed;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    /* Initial size (the "hole" is everything inside the border) */
     width: 400px;
     height: 400px;
-    
     border-radius: 50%;
-    background: transparent;           /* So you can see through the center */
-    border: 5px solid #acacac;        /* Adjust thickness to make the ring thicker or thinner */
-    
+    background: transparent;
+    border: 5px solid #c9c7c7;
+    z-index: -1;
     transition: width 0.15s ease, height 0.15s ease;
-    z-index: -1; /* Behind other content */
   }
   
-  /* Example content styling */
-  .content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin-top: 0px;
-    font-family: sans-serif;
-  }
+  
