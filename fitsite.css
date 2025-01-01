@@ -173,3 +173,33 @@ header.transparent {
     background-color: #f4f4f4;
   }
   
+
+    /* background circle*/
+
+
+.background-ring {
+    position: fixed;     /* Stays in the same place */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Initial size (the "hole" is everything inside the border) */
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 50%;
+    background: transparent;           /* So you can see through the center */
+    border: 5px solid #e6739f;        /* Adjust thickness to make the ring thicker or thinner */
+    
+    transition: width 0.15s ease, height 0.15s ease;
+    z-index: -1; /* Behind other content */
+  }
+  
+  /* Example content styling */
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 100px;
+    font-family: sans-serif;
+  }

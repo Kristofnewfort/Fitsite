@@ -46,4 +46,33 @@ window.addEventListener('scroll', () => {
   }
 });
 
+  // Select the circle
+const circle = document.querySelector('.background-circle');
+
+// Listen for scroll events
+window.addEventListener('scroll', () => {
+  // Measure how far down the page is scrolled
+  const scrollY = window.scrollY;
   
+  // Calculate a new size based on scroll. Adjust the multiplier as you like.
+  const newSize = 100 + scrollY * 0.3;
+  
+  // Apply the new width and height
+  circle.style.width = `${newSize}px`;
+  circle.style.height = `${newSize}px`;
+});
+
+const ring = document.querySelector('.background-ring');
+
+// Listen for scroll events
+window.addEventListener('scroll', () => {
+  // Measure how far down the page is scrolled
+  const scrollY = window.scrollY;
+  
+  // Calculate a new size based on scroll (adjust multiplier as needed)
+  const newSize = 100 + scrollY * 0.3;
+  
+  // Update the ring’s width and height
+  ring.style.width = `${newSize}px`;
+  ring.style.height = `${newSize}px`;
+});
