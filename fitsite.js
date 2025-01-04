@@ -4,6 +4,11 @@ function scrollToSignup() {
   signupSection.scrollIntoView({ behavior: 'smooth' });
 }
 
+function scrollToSignup() {
+  const about = document.getElementById('about');
+  about.scrollIntoView({ behavior: 'smooth' });
+}
+
 // Change Header Background on Scroll
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
@@ -18,7 +23,8 @@ window.addEventListener('scroll', () => {
 const ring = document.querySelector('.background-ring');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  const newSize = 400 + scrollY * 0.3;
+  const newSize = 500 + scrollY * 0.2;
   ring.style.width = `${newSize}px`;
   ring.style.height = `${newSize}px`;
 });
+
