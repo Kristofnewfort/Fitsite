@@ -19,12 +19,22 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Background Ring Animation
 const ring = document.querySelector('.background-ring');
+
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
+  
+  // Increase the ring’s size
   const newSize = 500 + scrollY * 0.2;
   ring.style.width = `${newSize}px`;
   ring.style.height = `${newSize}px`;
+  
+  // Fade it out (down to 0 opacity)
+  const newOpacity = Math.max(1 - scrollY / 2000, 0);
+  ring.style.opacity = newOpacity;
+  
+  // Optional: blur to mimic particle “spread”
+  const blurValue = scrollY * 0.01;
+  ring.style.filter = `blur(${blurValue}px)`;
 });
 
