@@ -91,6 +91,7 @@
     background-color: #dfe0d5;
     color: #000000;
     font-size: 1rem;
+    margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 20px;
@@ -106,7 +107,8 @@
   
   /* 5. Programs Section */
   .programs {
-    background: linear-gradient(145deg, #aaaaaa00, #d4af3769);
+    background: linear-gradient(145deg, #aaaaaa00, #be96133f);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap; /* Wrap items on smaller screens */
     padding: 2rem;
@@ -114,6 +116,7 @@
     gap: 20px; /* Spacing between items */
     border: 0px solid transparent;
     background-clip: border-box, padding-box;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
   }
   
   .programs h2 {
@@ -136,7 +139,7 @@
   }
   
   /* Responsive Design: Stack programs vertically on smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 100%) {
     .programs {
       flex-direction: column;
     }
@@ -194,6 +197,7 @@
   #signupForm button {
     background-color: #050505;
     color: #fff;
+    margin-inline-start: 30%;
     font-size: 1rem;
     padding: 0.75rem 2rem;
     border: none;
@@ -214,6 +218,7 @@
   /* 7. About Section */
   .about {
     padding: 2rem;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
 
   }
   
@@ -234,7 +239,8 @@
   }
   
   .about img {
-    width: 150px;
+    width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -262,14 +268,11 @@
       align-items: center;
       text-align: center;
     }
-  
-    .about img {
-      width: 200px;
-    }
   }
   
   /* 8. Footer */
   .footer {
+    margin-top: 2rem;
     text-align: center;
     padding: 1rem;
     background: linear-gradient(rgba(59, 110, 206, 0));
@@ -309,6 +312,10 @@
       opacity 0.15s ease,
       filter 0.15s ease;
   }
+  
+  
+  
+  
   
   
   

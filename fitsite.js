@@ -37,4 +37,3 @@ window.addEventListener('scroll', () => {
   const blurValue = scrollY * 0.01;
   ring.style.filter = `blur(${blurValue}px)`;
 });
-
