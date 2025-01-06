@@ -37,3 +37,19 @@ window.addEventListener('scroll', () => {
   const blurValue = scrollY * 0.01;
   ring.style.filter = `blur(${blurValue}px)`;
 });
+
+const headerone = document.getElementById('mainHeader');
+
+window.addEventListener('scroll', () => {
+  // how far we've scrolled in pixels
+  const scrollY = window.scrollY; 
+  
+  // change 300 to any value you like to control how quickly it fades in
+  let alpha = scrollY / 900;
+
+  // limit alpha to a max of 1 so it doesn't exceed full opacity
+  if (alpha > 1) alpha = 1;
+
+  // adjust header background with new alpha
+  header.style.backgroundColor = `rgba(155, 155, 155, ${alpha})`;
+});
