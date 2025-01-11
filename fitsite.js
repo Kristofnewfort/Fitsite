@@ -53,3 +53,37 @@ window.addEventListener('scroll', () => {
   // adjust header background with new alpha
   header.style.backgroundColor = `rgba(155, 155, 155, ${alpha})`;
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById("testimonial-container");
+  const track = document.getElementById("testimonial-track");
+
+  // 1. Measure widths
+  const containerWidth = container.offsetWidth;
+  // We'll measure the width of just the FIRST half of the items (the original set).
+  // Suppose your original set is 3 items; measure them alone or just half of total track.
+  // For simplicity, let's measure the total track width and divide by 2:
+  const totalWidth = track.scrollWidth;
+  const halfWidth = totalWidth / 2; 
+  // (assuming your duplicated set is exactly the same length as the original set)
+
+  // 2. Starting position (at left = 0)
+  let position = 0; 
+  const speed = 1; // px per frame (increase for faster, decrease for slower)
+
+  function animate() {
+    position -= speed; 
+    // If we've scrolled beyond the first set, reset to 0
+    if (position <= -halfWidth) {
+      position = 0; 
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  // 3. Start the animation
+  animate();
+});
+
