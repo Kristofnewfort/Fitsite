@@ -58,12 +58,12 @@ body {
   }
   
   header.transparent {
-    background-color: rgba(155, 155, 155, 0.527);
+    background-color: rgba(112, 112, 112, 0);
   }
   
   header .logo {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   header nav ul {
@@ -82,6 +82,75 @@ body {
     color: #9c9c93;
     transition: all ease-in-out 250ms;
   }
+
+  /* Style for the navbar */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  transition: max-height 0.3s ease;
+}
+
+.navbar ul {
+  display: block;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.navbar a:hover {
+  color: #9c9c93;
+  transition: all ease-in-out 250ms;
+}
+
+/* Collapsible behavior for small screens */
+.navbar.collapsed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.navbar.expanded {
+  max-height: 500px; /* Adjust to fit the expanded content */
+  flex-direction: column;
+}
+
+/* Hamburger menu button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+/* Show the toggle button on smaller screens */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar.expanded {
+    display: flex;
+  }
+}
+
 
   
   /* 4. Hero Section */
@@ -151,6 +220,8 @@ body {
     max-width: 45%; /* Prevents items from becoming too wide */
     margin-bottom: 2rem;
     text-align: left; /* Align text to the left */
+    text-align: center;
+    font-weight: 500;
   }
   
   .program h3 {
@@ -183,9 +254,10 @@ body {
     -webkit-backdrop-filter: blur(5px);
     text-align: center;
     margin-top: 5rem;
+    padding-top: 2rem;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
     background-color: #ffffff2c;
-    border-radius: 2%;
+    border-radius: 1%;
   }
   
   .about h2 {
@@ -208,7 +280,7 @@ body {
     width: 90%;
     max-width: 50%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 3%;
     object-fit: cover;
   }
   
@@ -335,7 +407,6 @@ body {
       filter 0.15s ease;
   }
   
-}
   
   
   
