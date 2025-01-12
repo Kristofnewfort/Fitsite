@@ -129,9 +129,9 @@
     padding: 2rem;
     justify-content: space-between;
     gap: 20px; /* Spacing between items */
-    border: 0px solid transparent;
     background-clip: border-box, padding-box;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
+    border-radius: 2%;
   }
   
   .programs h2 {
@@ -163,40 +163,6 @@
     }
   }
   
-  /* 6. Signup Section */
-  .testimonials {
-    background: linear-gradient(145deg, #949494dc, #be961379);
-    text-align: center;
-    padding: 10rem; /* Fixed typo from `10rm` */
-    margin-top: 10rem;
-    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1); /* Creates a downward shadow with limited height */
-  }
-  
-  #testimonial-container {
-    position: relative;
-    width: 600px;      /* or whatever width works for you */
-    height: 100px;     /* match your testimonial height */
-    overflow: hidden;  /* hide what's outside the container */
-    border: 1px solid #ccc; /* optional for clarity */
-  }
-  
-  #testimonial-track {
-    position: absolute;
-    white-space: nowrap; /* keep all items on one line */
-    top: 0;
-    left: 0;
-  }
-  
-  .testimonial {
-    display: inline-block;
-    width: 250px;       /* or adjust as needed */
-    margin: 0 20px;     /* space between items */
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    padding: 10px;
-  }
-  
-  
   /* 7. About Section */
   .about {
     background: linear-gradient(
@@ -214,6 +180,7 @@
     margin-top: 5rem;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
     background-color: #ffffff2c;
+    border-radius: 2%;
   }
   
   .about h2 {
@@ -264,6 +231,46 @@
     }
   }
 
+    /* 6. Testimonial Section */
+    .testimonials {
+      background: linear-gradient(145deg, #949494dc, #be961379);
+      text-align: center;
+      padding: 10rem;
+      margin-top: 5rem;
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
+      border-radius: 2%;
+    }
+    
+    #testimonial-container {
+      max-height: 300px; /* Set a maximum height */
+      padding: 1rem;
+      overflow-y: scroll; /* Enable vertical scrolling */
+      scrollbar-width: thin; /* For Firefox */
+      scrollbar-color: #5c5c5c #f9f9f93d; /* Optional: Customize scrollbar colors */
+      overflow-x: hidden;
+    }
+    
+    #testimonial-container::-webkit-scrollbar {
+      width: 8px; /* Scrollbar width for WebKit-based browsers */
+    }
+    
+    #testimonial-container::-webkit-scrollbar-thumb {
+      background-color: #6b6b6b; /* Scrollbar thumb color */
+      border-radius: 4px; /* Rounded corners */
+    }
+    
+    #testimonial-container::-webkit-scrollbar-track {
+      background-color: #f9f9f9; /* Scrollbar track color */
+    }
+    
+    .testimonial {
+      display: inline-block;
+      font-size: 1.25rem;
+      width: 100%;       /* or adjust as needed */
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
   /* 7. Contact*/
   .contact {
     background: linear-gradient(145deg, #94949449, #be961379);
@@ -272,6 +279,8 @@
     padding: 2rem;
     text-align: center;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
+    border-radius: 2%;
+    margin-top: 5rem;
   }
   
   /* 8. Footer */
