@@ -6,6 +6,11 @@
   }
   
   /* 2. Body & Global Styles */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
   /* The moving gradient container */
 .site-background {
   position: fixed;
@@ -234,8 +239,10 @@
     /* 6. Testimonial Section */
     .testimonials {
       background: linear-gradient(145deg, #949494dc, #be961379);
+      font-size: 1.3rem;
+      width: auto;
       text-align: center;
-      padding: 10rem;
+      padding: 5rem;
       margin-top: 5rem;
       box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 0 5px;
       border-radius: 2%;
@@ -243,7 +250,9 @@
     
     #testimonial-container {
       max-height: 300px; /* Set a maximum height */
+      width: 100%;
       padding: 1rem;
+      margin-top: 5rem;
       overflow-y: scroll; /* Enable vertical scrolling */
       scrollbar-width: thin; /* For Firefox */
       scrollbar-color: #5c5c5c #f9f9f93d; /* Optional: Customize scrollbar colors */
@@ -265,7 +274,7 @@
     
     .testimonial {
       display: inline-block;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       width: 100%;       /* or adjust as needed */
       box-sizing: border-box;
       padding: 20px;
