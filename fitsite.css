@@ -360,6 +360,7 @@ body {
   
   /* 8. Footer */
   .footer {
+    max-width: 100%;
     margin-top: 2rem;
     text-align: center;
     padding: 1rem;
