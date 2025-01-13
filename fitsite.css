@@ -11,6 +11,22 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Hide scrollbars for most modern browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* optional */
+}
+html {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* If you want to ensure body doesn't show a scrollbar, you can do: */
+body {
+  overflow-y: scroll; /* Keep page scrollable with hidden scrollbar */
+}
+
+
   /* The moving gradient container */
 .site-background {
   position: fixed;
@@ -352,6 +368,27 @@ body {
       box-sizing: border-box;
       padding: 20px;
     }
+
+    /* Target your Testimonials container specifically */
+#testimonial-container {
+  overflow-y: auto;     /* or scroll */
+  scrollbar-width: thin; /* Make sure scrollbar appears in Firefox */
+}
+
+/* Make the scrollbar visible in WebKit browsers */
+#testimonial-container::-webkit-scrollbar {
+  width: 8px;          /* or whatever width you prefer */
+}
+
+#testimonial-container::-webkit-scrollbar-thumb {
+  background-color: #6b6b6b; /* your thumb color */
+  border-radius: 4px;
+}
+
+#testimonial-container::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
 
   /* 7. Contact*/
   .contact {
