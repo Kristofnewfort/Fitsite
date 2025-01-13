@@ -150,7 +150,7 @@ body {
 }
 
 /* Show the toggle button on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .nav-toggle {
     display: block;
   }
@@ -181,7 +181,7 @@ body {
     padding: 2rem;
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     .hero h1 {
       font-size: 2rem;
     }
@@ -317,7 +317,7 @@ body {
   }
   
   /* Responsive Design: Stack image and text vertically */
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     .about div {
       flex-direction: column;
       align-items: center;
