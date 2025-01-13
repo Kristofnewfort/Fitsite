@@ -103,7 +103,7 @@ body {
 .navbar {
   display: flex;
   gap: 2rem;
-  transition: max-height 0.3s ease;
+  transition: max-height 1s ease;
 }
 
 .navbar ul {
@@ -125,29 +125,6 @@ body {
   transition: all ease-in-out 250ms;
 }
 
-/* Collapsible behavior for small screens */
-.navbar.collapsed {
-  max-height: 0;
-  overflow: hidden;
-}
-
-.navbar.expanded {
-  max-height: 500px; /* Adjust to fit the expanded content */
-  flex-direction: column;
-}
-
-/* Hamburger menu button */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.nav-toggle:focus {
-  outline: none;
-}
 
 /* Show the toggle button on smaller screens */
 @media (max-width: 576px) {
