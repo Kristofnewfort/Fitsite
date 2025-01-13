@@ -165,9 +165,10 @@ body {
     padding: 2rem;
   }
   
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
   }
   
   .hero button {
@@ -336,7 +337,7 @@ body {
     }
     
     #testimonial-container::-webkit-scrollbar-thumb {
-      background-color: #6b6b6b; /* Scrollbar thumb color */
+      background-color: #6b6b6b00; /* Scrollbar thumb color */
       border-radius: 4px; /* Rounded corners */
     }
     
@@ -369,7 +370,7 @@ body {
     margin-top: 2rem;
     text-align: center;
     padding: 1rem;
-    background: linear-gradient(rgba(59, 110, 206, 0));
+    background: linear-gradient(rgb(59, 110, 206));
   }
   
   /* 9. Background Circle */
