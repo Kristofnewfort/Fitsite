@@ -387,11 +387,11 @@ body {
     
     /* Golden glow */
     box-shadow: 
-      0 0 20px rgba(255, 223, 0, 0.7),     /* Outer glow */
-      inset 0 0 10px rgba(255, 215, 0, 0.5), /* Inner shine */
-      0 0 50px rgba(255, 223, 0, 0.3);     /* Reflective glow */
+      0 0 30px rgba(255, 223, 0, 0.7),     /* Outer glow */
+      inset 0 0 15px rgba(255, 215, 0, 0.5), /* Inner shine */
+      0 0 60px rgba(255, 223, 0, 0.3);     /* Reflective glow */
       
-    z-index: -1;
+    z-index: -10;
     
     /* Smooth transitions for size, opacity, and any filters */
     transition: 
