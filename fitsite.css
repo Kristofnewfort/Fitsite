@@ -42,7 +42,7 @@ body {
     #acacac,
     #d4b60a
   );
-  background-size: 400% 400%;
+  background-size: 200% 150%;
   animation: gradientAnimation 15s ease infinite;
 }
 
@@ -247,7 +247,7 @@ body {
   }
   
   /* Responsive Design: Stack programs vertically on smaller screens */
-  @media (max-width: 100%) {
+  @media (max-width: 576px) {
     .programs {
       flex-direction: column;
     }
