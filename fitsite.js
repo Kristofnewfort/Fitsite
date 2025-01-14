@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => {
   ring.style.height = `${newSize}px`;
   
   // Fade it out (down to 0 opacity)
-  const newOpacity = Math.max(1 - scrollY / 2000, 0);
+  const newOpacity = Math.max(1 - scrollY / 2000, 1000);
   ring.style.opacity = newOpacity;
   
   // Optional: blur to mimic particle “spread”
