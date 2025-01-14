@@ -41,21 +41,24 @@ body {
   background: linear-gradient(
     135deg,
     #000000,
-    #3e3e3e,
-    #acacac,
-    #d4b60a
+    #000000,
+    #2b2b2a,
+    #414141,
+    #696969,
+    #948847,
+    #c4a914
   );
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradientAnimation 15s ease infinite;
 }
 
-
 /* Keyframes for the animated gradient */
 @keyframes gradientAnimation {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 70%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position: 20% 50%; }
+  50%  { background-position: 80% 60%; }
+  100% { background-position: 20% 50%; }
 }
+
 
 /* Main content container that sits above the background */
 .content-wrapper {
@@ -83,6 +86,7 @@ body {
   header .logo {
     font-weight: bold;
     font-size: 2rem;
+    color: #d3d3d3;
   }
   
   header nav ul {
@@ -94,11 +98,11 @@ body {
   header nav a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: #000000;
+    color: #d3d3d3;
   }
   
   header nav a:hover {
-    color: #e4e4e4;
+    color: #d1c029;
     transition: all ease-in-out 250ms;
   }
 
@@ -120,7 +124,6 @@ body {
 .navbar a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #000000;
 }
 
   
@@ -132,7 +135,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: #bebebe;
     padding: 2rem;
   }
   
@@ -143,7 +146,7 @@ body {
   }
   
   .hero button {
-    background-color: #dfe0d5;
+    background-color: #f5e2c8;
     color: #000000;
     font-size: 1rem;
     margin-top: 1.5rem;
